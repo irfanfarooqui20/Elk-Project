@@ -1,4 +1,4 @@
-
+      dest: /etc/filebeat/filebeat.yml
 
     #use command module
   - name: enable and configure system module
@@ -17,5 +17,4 @@
     systemd:
       name: filebeat
       enabled: yes
-
 
