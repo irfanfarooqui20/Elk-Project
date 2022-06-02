@@ -75,8 +75,8 @@ These Beats allow us to collect the following information from each machine:
 - Filebeats 
 - Metricbeats 
 
-- Filebeats collects data of the filesystem and changes (provide example) 
-- Metricbeats detects changes in system metrics (provide example) 
+- Filebeats collects data of the filesystem and changes (such as weblog data) 
+- Metricbeats detects changes in system metrics (such as look for SSH attempts) 
 
 
 Using the Playbook
