@@ -28,6 +28,8 @@ The aspect of security of load balancers is to protect against distubed denial-o
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the network files and system monitor system metrics.
 
 - Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on your servers, Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
+
+
 What does Metricbeat record?
 
 - Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash. Metricbeat helps you monitor your servers by collecting metrics from the system and services running on the server, such as: Apache. HAProxy.
@@ -36,6 +38,9 @@ What does Metricbeat record?
 
 
 Access Policies
+
+
+
 The machines on the internal network are not exposed to the public Internet.
 Only the Jumpbox machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - My personal IP address 
@@ -43,10 +48,16 @@ Only the Jumpbox machine can accept connections from the Internet. Access to thi
 A connection to the Jumpbox will allow an SSH to Web 1,2,3, and the Elk Server. The IP address 51.12.241.212.
 
 Elk Configuration
+
+
+
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible is completely free. With the automatic configuration processes the configuration of multiple webservers within one shot. Patches can also be made easily to fix the ansible-playbooks. 
 
 
-TODO: What is the main advantage of automating configuration with Ansible?
+What is the main advantage of automating configuration with Ansible?
+
+
+Very simple to set up and use: No special coding skills are necessary to use Ansible's playbooks (more on playbooks later). Powerful: Ansible lets you model even highly complex IT workflows. Flexible: You can orchestrate the entire application environment no matter where it's deployed
 
 The playbook implements the following tasks:
 
@@ -92,9 +103,13 @@ SSH into the control node and follow the steps below:
 
 
 Which file is the playbook? Where do you copy it?
+
+
 - The Filebeat configuration and copy it to copy /etc/ansible/filebeat-config.yml to /etc/filebeat/filebeat.yml
 
 Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+
+
 - update filebeat-config.yml
 - Find a specific machine to install by going into the host files and updating the ip addressses of the web and elk servers for the ansible containers to run on 
 
