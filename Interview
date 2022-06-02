@@ -1,0 +1,38 @@
+Domain: Network Security
+Faulty Firewall
+
+
+Here is a situation: Suppose you have a firewall that's supposed to block SSH connections, but instead lets them through. How would you debug it?
+
+The problem is that a firewall is supposed to block SSH connections , but is letting them through. 
+
+Provide a Concrete Example Scenario
+
+Take for the Elk project, did you allow SSH traffic to all of the VMs on your network?
+
+  We did not allow SSH traffic to all of the VMs on my specific network. 
+
+
+Which VMs did accept SSH connections?
+
+
+  The VMs that did accept the SSH connections were Jumpbox and Elk servers. To access Webserver VMs 1,2,3, you must SSH into the Jumpbox servers then into Web VMs. 
+
+
+What happens if you try to connect to a VM that does not accept SSH connections? Why?
+  If you tried connecting to a VM that does not accept SSH connections then you would be rejected. The reason being is because the connection is not established from one webserver to another. The connection must be established alongside its inbound security rules allowing the action of an SSH connection. 
+
+Explain the Solution Requirements
+
+
+  I would assume the source of error is coming from the firewall and need to reconfigure which SSH connections should be allowed. If an SSH connection is connected the source error could be a couple of things: 
+    Verify the host ip-address
+    Verify the firewall rules 
+    Verify the port number allowed for ssh 
+    Verify that the service is running properly 
+
+Once those security rules are placed I would test the connections by trying to SSH them and see if the connection is rejected. 
+
+Explain the Solution Details
+
+In terms of investigating the problem I would first test the ping of my connection in my terminal to see if it is reachable. Then let’s say it is reachable when it is not supposed to be , I will access Azure UI and go to every VM and check their inbound security rules.  I would check between each VM to see which are allowing connections from IP addresses and ports Once it is identified the VMs that are allowing for SSH connections I would alter the rule where they are not allowing the SSH connection by deleting the rule and make sure it is blocking all incoming traffic from connections other than the specific connections (such as my home address IP or from one virtual machines private IP address to another) for a owner to access. Can use the firewall command and ssh status to ensure the rules are in place and that the SSH connections are well-defended. I would test my corrections by trying to SSH places from IP addresses that are not allowed to ensure the firewall is up and running and can come from only certain ports or connections.   
