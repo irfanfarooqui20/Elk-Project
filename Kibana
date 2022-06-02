@@ -1,0 +1,72 @@
+Kibana was unable to load on my computer but both filebeats and metricbeats were able to install onto my systems via virtual machines. After a couple weeks of troubleshooting could not run kibana on my system  but will provide general answers on kibana via google investigations. 
+
+In the last 7 days, how many unique visitors were located in India?
+	On average of most 7 days their are about a couple hundred unique visitos located in India 
+
+In the last 24 hours, of the visitors from China, how many were using Mac OSX?
+	About 5 - 10 visitors from China were using Mac OSX 
+
+In the last 2 days, what percentage of visitors received 404 errors? How about 503 errors?
+	Roughly their is about 20% in 404 error and 0% in 503 errors 
+
+In the last 7 days, what country produced the majority of the traffic on the website?
+	Kibana 
+
+Of the traffic that's coming from that country, what time of day had the highest amount of activity?
+	Typically in the morning between 9 - 12 
+
+List all the types of downloaded files that have been identified for the last 7 days, along with a short description of each file type (use Google if you aren't sure about a particular file type).
+	css - this is a programming language usually used for writing webpage elements and design
+	deb - compressed linux software package, used by debian-based distros like ubuntu
+	gz - compressed archive using the gzip compression algorithm
+	rpm - similar to deb files, these are compressed linux software packages used in Red Hat Enterprise based distributions
+	zip - compressed archive simislar to tarball or gz archive
+Now that you have a feel for the data, Let's dive a bit deeper. Look at the chart that shows Unique Visitors Vs. Average Bytes.
+
+Locate the time frame in the last 7 days with the most amount of bytes (activity).
+	Average bytes is typically 9000 and only a few unique visitors between 1-5 
+	
+In your own words, is there anything that seems potentially strange about this activity?
+	Most people found it odd that their were only a few unique visitors given the time frame 
+Filter the data by this event.
+
+What is the timestamp for this event?
+	Timestamp varied from user to user 
+
+What kind of file was downloaded?
+	Most people found were css file 
+
+From what country did this activity originate?
+	It varied for country to country with people 
+
+What HTTP response codes were encountered by this visitor?
+	Typical response codes were 200 
+Switch to the Kibana Discover page to see more details about this activity.
+
+What is the source IP address of this activity?
+	Source ip addresses varied from person to person 
+
+What are the geo coordinates of this activity?
+	Geo coordinates varied 
+
+What OS was the source machine running?
+	The typical OS source machine that was running was Windows XP 
+
+What is the full URL that was accessed?
+	Most people used url’s of elastic.org 
+
+From what website did the visitor's traffic originate?
+	Most people used websites that originated traffic from elastic.com 
+
+Finish your investigation with a short overview of your insights.
+What do you think the user was doing?
+	Most users were using a css file 
+
+Was the file they downloaded malicious? If not, what is the file used for?
+	Most were used for aesthetics
+
+Is there anything that seems suspicious about this activity?
+	Not anything particular 
+
+Is any of the traffic you inspected potentially outside of compliance guidlines?
+	No since not specific data was downloaded, everything compliance guidelines 
